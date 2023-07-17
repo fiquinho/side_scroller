@@ -1,8 +1,7 @@
 extends Node
 
 
-signal hit_wall
-signal lose_life(previous, new)
+var starting_lifes = 3
 
 
 # Called when the node enters the scene tree for the first time.

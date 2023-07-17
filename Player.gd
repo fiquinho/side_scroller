@@ -7,12 +7,11 @@ const gravity_mult = 1.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * gravity_mult
-var lives = 3
+var lives = GameConfig.starting_lifes
 
 
 func _ready():
 	SignalBus.connect("hit_wall", _on_hit_wall)
-
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -35,11 +34,10 @@ func _physics_process(delta):
 
 func _on_hit_wall():
 	lives -= 1
-	print(lives)
+	SignalBus.emit_signal("lose_life", lives + 1, lives)
 	_damage_blink()
 
 func _damage_blink():
-		
 	var tween = get_tree().create_tween()
 	tween.tween_property($Sprite2D, "modulate", Color(1, 1 ,1 ,0), 0.25)
 	tween.tween_property($Sprite2D, "modulate", Color(1, 1 ,1 , 1), 0.25)

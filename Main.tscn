@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://bdno7k8x86f4"]
+[gd_scene load_steps=9 format=3 uid="uid://bdno7k8x86f4"]
 
 [ext_resource type="PackedScene" uid="uid://dy4o51snbia67" path="res://Player.tscn" id="1_bqsnq"]
 [ext_resource type="Script" path="res://Main.gd" id="1_l5gxs"]
-[ext_resource type="PackedScene" uid="uid://dxgq44r4i4qag" path="res://king.tscn" id="2_gtcrv"]
+[ext_resource type="PackedScene" path="res://king.tscn" id="2_gtcrv"]
 [ext_resource type="Script" path="res://Player.gd" id="2_r7iaq"]
 [ext_resource type="PackedScene" uid="uid://cd1ixant7ob46" path="res://Platform.tscn" id="3_4ru80"]
-[ext_resource type="PackedScene" uid="uid://7brei3r1a7lf" path="res://Background.tscn" id="6_6rye8"]
+[ext_resource type="PackedScene" path="res://Background.tscn" id="6_6rye8"]
 [ext_resource type="Script" path="res://Background.gd" id="7_h86ik"]
+[ext_resource type="PackedScene" uid="uid://d11qcs3onbdaf" path="res://HUD.tscn" id="8_i6yxt"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(0, -3)
@@ -35,5 +36,7 @@ scale = Vector2(100, 100)
 [node name="Background" parent="." instance=ExtResource("6_6rye8")]
 position = Vector2(0, -4)
 script = ExtResource("7_h86ik")
+
+[node name="HUD" parent="." instance=ExtResource("8_i6yxt")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_obstacle_timer_timeout"]
