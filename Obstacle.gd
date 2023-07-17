@@ -14,7 +14,9 @@ func _ready():
 func _process(delta):
 	if is_playing:
 		position.x -= delta * speed
-
+		
+	if position.x < -50:
+		self.queue_free()
 
 func _on_body_entered(body):
 	

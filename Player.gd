@@ -36,4 +36,12 @@ func _physics_process(delta):
 func _on_hit_wall():
 	lives -= 1
 	print(lives)
-	
+	_damage_blink()
+
+func _damage_blink():
+		
+	var tween = get_tree().create_tween()
+	tween.tween_property($Sprite2D, "modulate", Color(1, 1 ,1 ,0), 0.25)
+	tween.tween_property($Sprite2D, "modulate", Color(1, 1 ,1 , 1), 0.25)
+	tween.tween_property($Sprite2D, "modulate", Color(1, 1 ,1 ,0), 0.25)
+	tween.tween_property($Sprite2D, "modulate", Color(1, 1 ,1 , 1), 0.25)
