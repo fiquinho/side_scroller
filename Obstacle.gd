@@ -1,10 +1,8 @@
 extends Area2D
 
-signal hit_wall
 
 var speed = 400
 var is_playing = true
-
 
 
 # Called when the node enters the scene tree for the first time.
@@ -20,7 +18,6 @@ func _process(delta):
 		self.queue_free()
 
 func _on_body_entered(body):
-	
 	if body.is_in_group("Player"):
 		SignalBus.emit_signal("hit_wall")
 		

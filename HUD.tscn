@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://d11qcs3onbdaf"]
+
+[ext_resource type="Script" path="res://HUD.gd" id="1_dqns4"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_dqns4")
+
+[node name="Lives" type="Label" parent="."]
+offset_left = 83.0
+offset_top = 68.0
+offset_right = 514.0
+offset_bottom = 154.0
+theme_override_font_sizes/font_size = 60
+text = "Lives: "
+vertical_alignment = 1

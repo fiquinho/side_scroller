@@ -12,7 +12,6 @@ const START_POSITION_Y = 398.6
 @export var obstacle_scene: PackedScene
 
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
-var obstacles_timer: Timer
 
 
 func _generate_random_time() -> float:
