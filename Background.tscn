@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://7brei3r1a7lf"]
+
+[ext_resource type="Texture2D" uid="uid://dej0gpoj22gav" path="res://—Pngtree—modern double color futuristic neon_1181573.jpg" id="1_tmi83"]
+
+[node name="Background" type="Node2D"]
+
+[node name="—pngtree—modernDoubleColorFuturisticNeon1181573" type="Sprite2D" parent="."]
+scale = Vector2(1, 0.56)
+texture = ExtResource("1_tmi83")
+centered = false
+
+[node name="—pngtree—modernDoubleColorFuturisticNeon1181573" type="Sprite2D" parent="—pngtree—modernDoubleColorFuturisticNeon1181573"]
+position = Vector2(1920, 0)
+texture = ExtResource("1_tmi83")
+centered = false
