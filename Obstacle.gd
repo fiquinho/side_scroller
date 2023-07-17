@@ -1,5 +1,6 @@
 extends Area2D
 
+signal hit_wall
 
 var speed = 400
 var is_playing = true
@@ -18,5 +19,5 @@ func _process(delta):
 func _on_body_entered(body):
 	
 	if body.is_in_group("Player"):
-		is_playing = false
+		SignalBus.emit_signal("hit_wall")
 		
