@@ -20,7 +20,7 @@ func _process(delta):
 		self.queue_free()
 
 func _on_body_entered(body):
-	
+	print('dfsad')
 	if body.is_in_group("Player"):
 		SignalBus.emit_signal("hit_wall")
 		
